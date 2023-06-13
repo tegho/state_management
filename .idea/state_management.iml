@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/shopdata/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shopdata/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shopdata/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/datamodels/build" />
+      <excludeFolder url="file://$MODULE_DIR$/datamodels/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/datamodels/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shopbusiness/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shopbusiness/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shopbusiness/build" />
+      <excludeFolder url="file://$MODULE_DIR$/a02_business/build" />
+      <excludeFolder url="file://$MODULE_DIR$/a02_business/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/a02_business/.pub" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 33, extension level 4 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+  </component>
+</module>
