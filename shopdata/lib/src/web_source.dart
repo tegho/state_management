@@ -54,24 +54,26 @@ class WebSource implements DataService {
 
   @override
   Future<DataResponse> getProductList(
-      {String? category, int? skip, int? limit}) async {
-
+      {String category = '', int skip = 0, int limit = 30}) async {
     final String msgPrefix = 'Fetch product list:';
     String jsonRaw = '';
     Map<String, dynamic>? queryParameters = {};
 
-    if (limit != null) {
+    if (limit != 0) {
       queryParameters.addAll({'limit': limit.toString()});
     }
-    if (skip != null) {
+    if (skip != 0) {
       queryParameters.addAll({'skip': skip.toString()});
     }
     if (queryParameters.isEmpty) queryParameters = null;
 
     final path =
-        (category != null) ? 'products/category/$category' : 'products';
+        (category.isNotEmpty) ? 'products/category/$category' : 'products';
 
-
+/////////////////
+/// D E B U G ///
+await Future.delayed(Duration(seconds: 2));
+/////////////////
     try {
       final Uri uri = Uri.https('dummyjson.com', path, queryParameters);
       jsonRaw = await http.read(uri);

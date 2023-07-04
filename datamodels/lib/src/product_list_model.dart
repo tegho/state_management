@@ -8,6 +8,7 @@ part 'product_list_model.g.dart';
 
 @freezed
 class ProductListModel extends DataResponse with _$ProductListModel {
+
   const factory ProductListModel({
     required List<ProductModel> products,
     required int total,

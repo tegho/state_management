@@ -20,6 +20,12 @@
       <excludeFolder url="file://$MODULE_DIR$/a02_business/build" />
       <excludeFolder url="file://$MODULE_DIR$/a02_business/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/a02_business/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/a02_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/a02_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/a02_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/a03_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/a03_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/a03_app/.pub" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 33, extension level 4 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

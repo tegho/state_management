@@ -2,7 +2,11 @@ import 'data_response.dart';
 
 class DataResponseError extends DataResponse {
   final bool isError = true;
-  final String message;
+  late final String _message;
 
-  const DataResponseError({this.message = ''});
+  DataResponseError({String message = ''}) {
+    _message = message;
+  }
+
+  String get message => _message;
 }
