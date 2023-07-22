@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'business/providers.dart';
-import 'widgets/cart_drawer.dart';
-import 'widgets/category_selector.dart';
-import 'widgets/main_page.dart';
+import '/business/providers.dart';
+import '/widgets/cart_drawer.dart';
+import '/widgets/category_selector.dart';
+import '/widgets/main_page.dart';
 
 void main() {
   runApp(

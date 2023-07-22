@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'business/state_manager.dart';
-import 'widgets/cart_drawer.dart';
-import 'widgets/main_page.dart';
-import 'widgets/category_selector.dart';
+import '/business/state_manager.dart';
+import '/widgets/cart_drawer.dart';
+import '/widgets/main_page.dart';
+import '/widgets/category_selector.dart';
 
 
 void main() {

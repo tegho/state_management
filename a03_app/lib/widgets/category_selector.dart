@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../business/providers.dart';
+import '/business/providers.dart';
 
 //ignore: must_be_immutable
 class CategorySelectorLeftDrawer extends ConsumerWidget {

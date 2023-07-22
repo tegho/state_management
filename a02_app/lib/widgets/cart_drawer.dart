@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-import '../business/state_manager.dart';
+import '/business/state_manager.dart';
 
 class CartDrawer extends StatelessWidget {
   const CartDrawer({super.key});

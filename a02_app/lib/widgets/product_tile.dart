@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:datamodels/datamodels.dart';
 
-import '../widgets/product_info.dart';
+import '/widgets/product_info.dart';
 
 class ProductTile extends StatelessWidget {
   final ProductModel product;

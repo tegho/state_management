@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../datamodels.dart';
+import '/datamodels.dart';
 
 part 'product_model.freezed.dart';
 

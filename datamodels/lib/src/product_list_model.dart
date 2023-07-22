@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../datamodels.dart';
+import '/datamodels.dart';
 
 part 'product_list_model.freezed.dart';
 
@@ -17,7 +17,7 @@ class ProductListModel extends DataResponse with _$ProductListModel {
   }) = _ProductListModel;
 
   factory ProductListModel.empty() =>
-      ProductListModel(products: [], total: 0, skip: 0, limit: 0);
+      const ProductListModel(products: [], total: 0, skip: 0, limit: 0);
 
   factory ProductListModel.fromJson(Map<String, Object?> json) =>
       _$ProductListModelFromJson(json);

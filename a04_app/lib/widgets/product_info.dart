@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:datamodels/datamodels.dart';
-import '../business/providers.dart';
-import '../widgets/image_viewer.dart';
+import '/business/providers.dart';
+import '/widgets/image_viewer.dart';
 
 class ProductInfo extends ConsumerWidget {
   final ProductModel product;

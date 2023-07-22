@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:datamodels/datamodels.dart';
-import '../business/providers.dart';
-import '../widgets/product_tile.dart';
+import '/business/providers.dart';
+import '/widgets/product_tile.dart';
 
 class MainPage extends ConsumerStatefulWidget {
   const MainPage({super.key});

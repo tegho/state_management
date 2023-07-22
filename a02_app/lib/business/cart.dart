@@ -2,7 +2,7 @@ import 'package:datamodels/datamodels.dart';
 
 class CartItem {
   final ProductModel product;
-  int count;
+  final int count;
 
   CartItem({required this.product, required this.count});
 }
@@ -30,36 +30,31 @@ class Cart {
   }
 
   void addToCart({required ProductModel product, int count = 1}) {
-    for (final item in _items) {
-      // compare just id to speed up
-      if (item.product.id == product.id) {
-        item.count += count;
-        if (item.count < 1) {
-          _items.remove(item);
-        }
-        _sumRecount();
-        if (notifyChangesCallback != null) notifyChangesCallback!();
-        return;
+    try {
+      final CartItem item = _items.firstWhere((i) => i.product == product);
+      final int index = _items.indexOf(item);
+      final int newCount = item.count + count;
+      if (newCount < 1) {
+        _items.remove(item);
+      } else {
+        _items[index] = CartItem(product: product, count: newCount);
       }
-    }
-
-    if (count > 0) {
+    } catch (_) {
+      if (count < 1) return;
       _items.add(CartItem(product: product, count: count));
+    } finally {
       _sumRecount();
       if (notifyChangesCallback != null) notifyChangesCallback!();
     }
   }
 
   void removeFromCart({required ProductModel product}) {
-    for (final item in _items) {
-      // compare just id to speed up
-      if (item.product.id == product.id) {
-        _items.remove(item);
-        _sumRecount();
-        if (notifyChangesCallback != null) notifyChangesCallback!();
-        return;
-      }
-    }
+    try {
+      final CartItem item = _items.firstWhere((i) => i.product == product);
+      _items.remove(item);
+      _sumRecount();
+      if (notifyChangesCallback != null) notifyChangesCallback!();
+    } catch (_) {}
   }
 
   void clearCart() {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../business/providers.dart';
+import '/business/providers.dart';
 
 class CartDrawer extends ConsumerWidget {
   const CartDrawer({super.key});

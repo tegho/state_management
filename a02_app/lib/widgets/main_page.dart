@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../business/state_manager.dart';
-import '../widgets/product_tile.dart';
+import '/business/state_manager.dart';
+import '/widgets/product_tile.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

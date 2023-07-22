@@ -2,8 +2,8 @@ import 'package:datamodels/datamodels.dart';
 import 'package:shopdata/shopdata.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../business/cart_item.dart';
-import '../business/notifiers.dart';
+import '/business/cart_item.dart';
+import '/business/notifiers.dart';
 
 final serviceProvider = Provider((ref) {
   serviceProviderInit();

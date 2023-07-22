@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:datamodels/datamodels.dart';
-import '../business/providers.dart';
+import '/business/providers.dart';
 
 class ProductInfo extends ConsumerStatefulWidget {
   final ProductModel product;

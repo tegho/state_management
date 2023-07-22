@@ -1,7 +1,7 @@
 import 'package:datamodels/datamodels.dart';
 import 'package:shopdata/shopdata.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import '../business/cart_item.dart';
+import '/business/cart_item.dart';
 
 class CartNotifier extends StateNotifier<List<CartItem>> {
   CartNotifier() : super([]);
@@ -20,21 +20,20 @@ class CartNotifier extends StateNotifier<List<CartItem>> {
   void addToCart({required ProductModel product, int count = 1}) {
     final List<CartItem> oldCart = List<CartItem>.from(state);
 
-    for (final item in oldCart) {
-      // compare just id to speed up
-      if (item.product.id == product.id) {
-        item.count += count;
-        if (item.count < 1) {
-          oldCart.remove(item);
-        }
-        state = List<CartItem>.from(oldCart);
-        _sumRecount();
-        return;
+    try {
+      final CartItem item = oldCart.firstWhere((i) => i.product == product);
+      final int index = oldCart.indexOf(item);
+      final int newCount = item.count + count;
+      if (newCount < 1) {
+        oldCart.remove(item);
+      } else {
+        oldCart[index] = CartItem(product: product, count: newCount);
       }
-    }
+    } catch (_) {
+      if (count < 1) return;
 
-    if (count > 0) {
       oldCart.add(CartItem(product: product, count: count));
+    } finally {
       state = List<CartItem>.from(oldCart);
       _sumRecount();
     }
@@ -43,15 +42,12 @@ class CartNotifier extends StateNotifier<List<CartItem>> {
   void removeFromCart({required ProductModel product}) {
     final List<CartItem> oldCart = List<CartItem>.from(state);
 
-    for (final item in oldCart) {
-      // compare just id to speed up
-      if (item.product.id == product.id) {
-        oldCart.remove(item);
-        state = List<CartItem>.from(oldCart);
-        _sumRecount();
-        return;
-      }
-    }
+    try {
+      final CartItem item = oldCart.firstWhere((i) => i.product == product);
+      oldCart.remove(item);
+      state = List<CartItem>.from(oldCart);
+      _sumRecount();
+    } catch (_) {}
   }
 
   void clearCart() {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:datamodels/datamodels.dart';
 import 'package:shopdata/shopdata.dart';
-import '../business/cart.dart';
+import '/business/cart.dart';
 
 class StateManager with ChangeNotifier {
   late final DataService _dataService;

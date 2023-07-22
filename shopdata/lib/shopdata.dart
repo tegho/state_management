@@ -1,4 +1,4 @@
 library shopdata;
 
-export 'src/interfaces.dart';
-export 'src/service_provider.dart';
+export '/src/interfaces.dart';
+export '/src/service_provider.dart';

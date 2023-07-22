@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 import 'package:datamodels/datamodels.dart';
-import '../shopdata.dart';
+import '/shopdata.dart';
 
 @LazySingleton(as: DataService)
 class WebSource implements DataService {

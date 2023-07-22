@@ -28,8 +28,8 @@
         <entry key="async">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.10.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib" />
             </list>
           </value>
         </entry>
@@ -65,6 +65,7 @@
         <entry key="build_resolvers">
           <value>
             <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.2.1/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.2.0/lib" />
             </list>
           </value>
@@ -128,8 +129,8 @@
         <entry key="collection">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.17.2/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.17.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.17.2/lib" />
             </list>
           </value>
         </entry>
@@ -164,8 +165,8 @@
         <entry key="dart_style">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/dart_style-2.3.1/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/dart_style-2.3.2/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/dart_style-2.3.1/lib" />
             </list>
           </value>
         </entry>
@@ -229,6 +230,7 @@
         <entry key="freezed">
           <value>
             <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/freezed-2.4.1/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/freezed-2.3.5/lib" />
             </list>
           </value>
@@ -236,6 +238,7 @@
         <entry key="freezed_annotation">
           <value>
             <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/freezed_annotation-2.4.1/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/freezed_annotation-2.2.0/lib" />
             </list>
           </value>
@@ -320,8 +323,8 @@
         <entry key="js">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.5/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7/lib" />
             </list>
           </value>
         </entry>
@@ -356,8 +359,8 @@
         <entry key="matcher">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.13/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16/lib" />
             </list>
           </value>
         </entry>
@@ -371,8 +374,8 @@
         <entry key="meta">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.9.1/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.8.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.9.1/lib" />
             </list>
           </value>
         </entry>
@@ -407,8 +410,8 @@
         <entry key="path">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.8.3/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.8.2/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.8.3/lib" />
             </list>
           </value>
         </entry>
@@ -520,8 +523,8 @@
         <entry key="source_span">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.9.1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0/lib" />
             </list>
           </value>
         </entry>
@@ -578,8 +581,8 @@
         <entry key="test_api">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.6.0/lib" />
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.4.16/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.6.0/lib" />
             </list>
           </value>
         </entry>
@@ -664,6 +667,7 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/build_config-1.1.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/build_daemon-3.1.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.2.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.2.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner-2.3.3/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner_core-7.2.7+1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/built_collection-5.1.1/lib" />
@@ -688,7 +692,9 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_riverpod-2.3.6/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/freezed-2.3.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/freezed-2.4.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/freezed_annotation-2.2.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/freezed_annotation-2.4.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/frontend_server_client-3.2.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/get_it-7.6.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/glob-2.1.2/lib" />

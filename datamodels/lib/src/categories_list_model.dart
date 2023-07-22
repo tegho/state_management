@@ -1,11 +1,7 @@
-import '../datamodels.dart';
+import '/datamodels.dart';
 
 class CategoriesListModel extends DataResponse {
-  late final List<String> _category;
+  final List<String> category;
 
-  CategoriesListModel({List<String> category = const []}) {
-    _category = category;
-  }
-
-  List<String> get category => _category;
+  const CategoriesListModel({this.category = const []});
 }
