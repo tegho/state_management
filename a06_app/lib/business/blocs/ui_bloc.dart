@@ -27,7 +27,7 @@ class UiBloc {
       case ActionUiInit:
         // Feature: open cart on app start
         // _currentState = _currentState.copyWith(drawerOpened: DrawersState.cart);
-        break;
+        return;
 
       case ActionUiSelectCategory:
         _currentState = _currentState.copyWith(

@@ -35,6 +35,7 @@ class CartBloc {
   void _handleAction(ActionCart action) async {
     switch (action.runtimeType) {
       case ActionCartInit:
+        return;
       case ActionCartClear:
         _currentState = const CartState();
         break;

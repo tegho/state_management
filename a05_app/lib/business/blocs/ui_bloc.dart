@@ -16,7 +16,6 @@ class UiBloc extends Bloc<ActionUi, UiState> {
       ActionUiInit action, Emitter<UiState> emit) async {
     // Feature: open cart by default
     // emit(state.copyWith(drawerOpened: DrawersState.cart));
-    emit(state);
   }
 
   Future<void> _onActionUiSelectCategory(

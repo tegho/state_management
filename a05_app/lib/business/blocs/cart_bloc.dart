@@ -16,7 +16,7 @@ class CartBloc extends Bloc<ActionCart, CartState> {
 
   Future<void> _onActionCartInit(
       ActionCartInit action, Emitter<CartState> emit) async {
-    emit(const CartState());
+    // emit(const CartState());
   }
 
   Future<void> _onActionCartClear(
