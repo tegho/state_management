@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:provider/provider.dart';
 import 'package:datamodels/datamodels.dart';
+
 import '/business/state_manager.dart';
 
 class ProductInfo extends StatefulWidget {
