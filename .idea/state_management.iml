@@ -35,6 +35,9 @@
       <excludeFolder url="file://$MODULE_DIR$/a06c_app/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/a06c_app/build" />
       <excludeFolder url="file://$MODULE_DIR$/a06c_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/a05_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/a05_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/a05_app/build" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 33, extension level 4 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

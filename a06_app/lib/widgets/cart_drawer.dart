@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 
-import '/business/blocs/ui_bloc.dart';
-import '/business/actions/cart_actions.dart';
-import '/business/states/cart_state.dart';
+import '/business/business_provider.dart';
 
 class CartDrawer extends StatelessWidget {
-  final UiBloc uiBloc;
+  final BusinessProvider businessProvider;
 
-  const CartDrawer({super.key, required this.uiBloc});
+  const CartDrawer({super.key, required this.businessProvider});
 
   @override
   Widget build(BuildContext context) {
-    uiBloc.cartBloc.action.add(ActionCartPullState());
+    businessProvider.cartBloc.action.add(ActionCartPullState());
     return StreamBuilder<CartState>(
-        stream: uiBloc.cartBloc.state,
+        stream: businessProvider.cartBloc.state,
         builder: (context, snapshot) {
           List<Widget> col = [];
 
@@ -38,7 +36,7 @@ class CartDrawer extends StatelessWidget {
                     leading: IconButton(
                       icon: const Icon(Icons.cancel_outlined),
                       onPressed: () {
-                        uiBloc.cartBloc.action
+                        businessProvider.cartBloc.action
                             .add(ActionCartRemove(product: cartItem.product));
                       },
                     ),
@@ -53,8 +51,10 @@ class CartDrawer extends StatelessWidget {
                             IconButton(
                                 icon: const Icon(Icons.remove),
                                 onPressed: () {
-                                  uiBloc.cartBloc.action.add(ActionCartAdd(
-                                      product: cartItem.product, count: -1));
+                                  businessProvider.cartBloc.action.add(
+                                      ActionCartAdd(
+                                          product: cartItem.product,
+                                          count: -1));
                                 }),
                             Text(cartItem.count.toString(),
                                 style: const TextStyle(
@@ -62,8 +62,9 @@ class CartDrawer extends StatelessWidget {
                             IconButton(
                                 icon: const Icon(Icons.add),
                                 onPressed: () {
-                                  uiBloc.cartBloc.action.add(ActionCartAdd(
-                                      product: cartItem.product, count: 1));
+                                  businessProvider.cartBloc.action.add(
+                                      ActionCartAdd(
+                                          product: cartItem.product, count: 1));
                                 }),
                           ]),
                     ),
@@ -86,7 +87,8 @@ class CartDrawer extends StatelessWidget {
                         FilledButton(
                             child: const Text('Clear'),
                             onPressed: () {
-                              uiBloc.cartBloc.action.add(ActionCartClear());
+                              businessProvider.cartBloc.action
+                                  .add(ActionCartClear());
                             }),
                         FilledButton(
                             child: const Text('Checkout'),

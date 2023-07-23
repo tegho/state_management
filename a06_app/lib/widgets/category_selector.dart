@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
 
-import '/business/blocs/ui_bloc.dart';
-import '/business/actions/categories_actions.dart';
-import '/business/actions/catalog_actions.dart';
-import '/business/actions/ui_actions.dart';
-import '/business/states/categories_state.dart';
+import '/business/business_provider.dart';
 
 class CategorySelectorLeftDrawer extends StatelessWidget {
-  final UiBloc uiBloc;
+  final BusinessProvider businessProvider;
 
-  const CategorySelectorLeftDrawer({super.key, required this.uiBloc});
+  const CategorySelectorLeftDrawer({super.key, required this.businessProvider});
 
   @override
   Widget build(BuildContext context) {
     double swipePositionStart = 0;
     double swipePositionLast = 0;
 
-    uiBloc.categoriesBloc.action.add(ActionCategoriesPullState());
+    businessProvider.categoriesBloc.action.add(ActionCategoriesPullState());
     return StreamBuilder<CategoriesState>(
-        stream: uiBloc.categoriesBloc.state,
+        stream: businessProvider.categoriesBloc.state,
         builder: (context, snapshot) {
           List<Widget> col = [];
           col.add(GestureDetector(
@@ -26,8 +22,10 @@ class CategorySelectorLeftDrawer extends StatelessWidget {
               // swipe down reloads categories
               if (swipePositionStart - swipePositionLast < 0) {
                 // print('swipe down');
-                uiBloc.categoriesBloc.action.add(ActionCategoriesClear());
-                uiBloc.categoriesBloc.action.add(ActionCategoriesLoad());
+                businessProvider.categoriesBloc.action
+                    .add(ActionCategoriesClear());
+                businessProvider.categoriesBloc.action
+                    .add(ActionCategoriesLoad());
               }
             },
             onPanDown: (details) {
@@ -59,12 +57,13 @@ class CategorySelectorLeftDrawer extends StatelessWidget {
                 title: Text('ALL ${snapshot.data!.list.category.length}'),
                 selected: snapshot.data!.selected == '',
                 onTap: () {
-                  uiBloc.categoriesBloc.action
+                  businessProvider.categoriesBloc.action
                       .add(ActionCategoriesChoose(category: ''));
-                  uiBloc.catalogBloc.action.add(ActionCatalogClear());
-                  uiBloc.catalogBloc.action
+                  businessProvider.catalogBloc.action.add(ActionCatalogClear());
+                  businessProvider.catalogBloc.action
                       .add(ActionCatalogLoadMore(category: ''));
-                  uiBloc.action.add(ActionUiSelectCategory(open: false));
+                  businessProvider.uiBloc.action
+                      .add(ActionUiSelectCategory(open: false));
                 },
               ),
             );
@@ -74,12 +73,13 @@ class CategorySelectorLeftDrawer extends StatelessWidget {
                 title: Text(cat.toUpperCase()),
                 selected: snapshot.data!.selected == cat,
                 onTap: () {
-                  uiBloc.categoriesBloc.action
+                  businessProvider.categoriesBloc.action
                       .add(ActionCategoriesChoose(category: cat));
-                  uiBloc.catalogBloc.action.add(ActionCatalogClear());
-                  uiBloc.catalogBloc.action
+                  businessProvider.catalogBloc.action.add(ActionCatalogClear());
+                  businessProvider.catalogBloc.action
                       .add(ActionCatalogLoadMore(category: cat));
-                  uiBloc.action.add(ActionUiSelectCategory(open: false));
+                  businessProvider.uiBloc.action
+                      .add(ActionUiSelectCategory(open: false));
                 },
               ));
             }

@@ -3,15 +3,7 @@ import 'dart:async';
 import '/business/actions/ui_actions.dart';
 import '/business/states/ui_state.dart';
 
-import '/business/blocs/categories_bloc.dart';
-import '/business/blocs/catalog_bloc.dart';
-import '/business/blocs/cart_bloc.dart';
-
 class UiBloc {
-  final CategoriesBloc categoriesBloc;
-  final CatalogBloc catalogBloc;
-  final CartBloc cartBloc;
-
   UiState _currentState = const UiState();
 
   final _stateController = StreamController<UiState>.broadcast();
@@ -21,11 +13,7 @@ class UiBloc {
 
   Sink<ActionUi> get action => _actionsController.sink;
 
-  UiBloc(
-    this.categoriesBloc,
-    this.catalogBloc,
-    this.cartBloc,
-  ) {
+  UiBloc() {
     _actionsController.stream.listen(_handleAction);
   }
 
@@ -37,7 +25,7 @@ class UiBloc {
   void _handleAction(ActionUi action) async {
     switch (action.runtimeType) {
       case ActionUiInit:
-        // Feature: open cart by default
+        // Feature: open cart on app start
         // _currentState = _currentState.copyWith(drawerOpened: DrawersState.cart);
         break;
 
@@ -55,8 +43,15 @@ class UiBloc {
         break;
 
       case ActionUiShowProduct:
-        _currentState = _currentState.copyWith(
-            uiProductPage: (action as ActionUiShowProduct).product);
+        // First close info if another product has already been opened.
+        // The case when ActionUiShowProduct has been received from outside.
+        _currentState = _currentState.copyWith(uiProductPage: null);
+        _stateController.add(_currentState);
+
+        if ((action as ActionUiShowProduct).product != null) {
+          _currentState = _currentState.copyWith(
+              uiProductPage: (action as ActionUiShowProduct).product);
+        }
         break;
 
       default:

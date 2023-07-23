@@ -10,11 +10,9 @@ import '/widgets/image_viewer.dart';
 //ignore: must_be_immutable
 class ProductInfo extends StatelessWidget {
   final ProductModel product;
-  final BusinessProvider businessProvider;
   StreamSubscription? streamSubscription;
 
-  ProductInfo(
-      {super.key, required this.businessProvider, required this.product});
+  ProductInfo({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +29,7 @@ class ProductInfo extends StatelessWidget {
       streamSubscription!.cancel();
     }
     streamSubscription =
-        businessProvider.uiBloc.state.listen(handleCloseAction);
+        context.read<UiBloc>().stream.listen(handleCloseAction);
 
     String titleShort = (product.title.length > 20)
         ? '${product.title.substring(0, 17)}...'
@@ -39,7 +37,7 @@ class ProductInfo extends StatelessWidget {
 
     return WillPopScope(
       onWillPop: () {
-        businessProvider.uiBloc.action.add(ActionUiShowProduct(product: null));
+        context.read<UiBloc>().add(ActionUiShowProduct(product: null));
         return Future.value(false);
       },
       child: Scaffold(
@@ -96,9 +94,11 @@ class ProductInfo extends StatelessWidget {
                             ],
                           ),
                           onPressed: () {
-                            businessProvider.cartBloc.action
+                            context
+                                .read<CartBloc>()
                                 .add(ActionCartAdd(product: product));
-                            businessProvider.uiBloc.action
+                            context
+                                .read<UiBloc>()
                                 .add(ActionUiShowProduct(product: null));
                           },
                         ),

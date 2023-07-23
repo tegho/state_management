@@ -6,17 +6,14 @@ import 'package:datamodels/datamodels.dart';
 
 class ProductTile extends StatelessWidget {
   final ProductModel product;
-  final BusinessProvider businessProvider;
 
-  const ProductTile(
-      {super.key, required this.businessProvider, required this.product});
+  const ProductTile({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        businessProvider.uiBloc.action
-            .add(ActionUiShowProduct(product: product));
+        context.read<UiBloc>().add(ActionUiShowProduct(product: product));
       },
       child: Card(
         elevation: 4,
