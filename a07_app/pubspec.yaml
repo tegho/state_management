@@ -1,0 +1,29 @@
+name: a07_app
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  get_it: ^7.6.0
+  datamodels:
+    path: '../datamodels'
+  shopdata:
+    path: '../shopdata'
+  cupertino_icons: ^1.0.2
+  freezed: ^2.4.1
+  freezed_annotation: ^2.4.1
+  flutter_redux: ^0.10.0
+  redux: ^5.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+
+flutter:
+  uses-material-design: true
